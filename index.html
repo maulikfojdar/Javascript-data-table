@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Pure JavaScript Data Table</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<h1> Pure JavaScript Data Table</h1>
+<div id="pageDropDown">
+  <label for="rowsPerPage">Rows per Page:</label>
+  <select id="rowsPerPage" name="rowsPerPage">
+    <option value="5">5</option>
+    <option value="10" selected>10</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+    <option value="30">30</option>
+    <option value="40">40</option>
+    <option value="50">50</option>
+  </select>
+</div>
+<br/>
+<div id="SearchBox">
+  <label for="search">Search: </label>
+  <input type="text" id="search" placeholder="Search data..."/>
+</div>
+<div id="dataTable">
+</div>
+<div id="pagination"></div>
+<script type="text/javascript" src="dataTable.js"></script>
+<script type="text/javascript" src="dataTableInitializer.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){ 
+    console.log("ready!");
+    dataTable.onload("source/data.json"); 
+  }); 
+</script>
+</body>
+</html>
